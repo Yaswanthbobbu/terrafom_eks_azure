@@ -1,0 +1,10 @@
+powershell: admin
+
+msiexec.exe /i https://awscli.amazonaws.com/AWSCLIV2.msi
+msiexec.exe /i https://awscli.amazonaws.com/AWSCLIV2.msi /qn (silent install)
+
+aws --version
+aws eks --region <us-east-1a> update-kubeconfig --name=<name present in main.tf > cluster-name>
+kubectl cluster-info >> kubernetes master is running at > service-url 
+kubectl get serviceaccounts default -o yaml = copy to secret
+
